@@ -13,6 +13,7 @@
 <title>Lista Contatos - Java Standard TagLib</title>
 </head>
 <body>
+    Usuario logado:${usuarioLogado.login} <c:import url="logout-parcial.jsp"></c:import> <br>
    <c:if test="${ not empty empresa}">
      Contato ${empresa.nome} cadastrada com sucesso!
    </c:if>
