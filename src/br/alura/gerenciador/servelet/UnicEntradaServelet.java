@@ -18,17 +18,17 @@ public class UnicEntradaServelet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession sessao = request.getSession();
+		//HttpSession sessao = request.getSession();
 		String paramAcao = request.getParameter("acao");
 		//verifica se existe ususario logado e atribui a variavel
-		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
-		boolean ehUmaAcaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
-		
-        if(ehUmaAcaoProtegida & usuarioNaoEstaLogado) {
-             response.sendRedirect("entrada?acao=LoginForm");
-             return;
-        }
-			
+//		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
+//		boolean ehUmaAcaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
+//		
+//        if(ehUmaAcaoProtegida & usuarioNaoEstaLogado) {
+//             response.sendRedirect("entrada?acao=LoginForm");
+//             return;
+//        }
+//			
 			
 			String nomeDaClasse = "br.com.carnauba.gerenciador.acao." + paramAcao;
 			
@@ -57,40 +57,6 @@ public class UnicEntradaServelet extends HttpServlet {
 			}
 		
 			
-//			String nome = null;
-//			
-//			if(paramAcao.equals("ListaEmpresas")){
-//				
-//		      ListaEmpresas acao = new ListaEmpresas();
-//		      nome = acao.executa(request,response);
-//		      
-//			} else if(paramAcao.equals("RemoveEmpresas")){
-//		
-//			   RemoveEmpresas acao = new RemoveEmpresas();
-//			   nome = acao.executa(request, response);
-//			}
-//			else if(paramAcao.equals("MostraEmpresas")){
-//				
-//			   MostraEmpresas acao  = new MostraEmpresas();
-//			   nome = acao.executa(request, response);
-//			}
-//			else if(paramAcao.equals("AlteraEmpresas")){
-//				
-//				AlteraEmpresas acao = new AlteraEmpresas();
-//				nome = acao.executa(request, response);
-//			}
-//		    else if(paramAcao.equals("NovaEmpresa")){
-//				
-//				NovaEmpresa acao = new NovaEmpresa();
-//				nome = acao.executa(request, response);
-//			}
-//            else if(paramAcao.equals("NovaEmpresaForm")){
-//				
-//            	NovaEmpresaForm acao = new NovaEmpresaForm();
-//				nome = acao.executa(request, response);
-//			}
-			
-
 		
 		}
 
