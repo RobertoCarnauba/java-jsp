@@ -20,7 +20,11 @@ public class AutorizacaoFilter implements Filter {
     public AutorizacaoFilter() {
     }
 
-
+    @Override
+	public void init(FilterConfig fConfig) throws ServletException {
+		
+	}
+    @Override
 	public void destroy() {
 	}
 
@@ -43,8 +47,5 @@ public class AutorizacaoFilter implements Filter {
 	}
 
 
-	public void init(FilterConfig fConfig) throws ServletException {
-		
-	}
 
 }
