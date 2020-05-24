@@ -26,7 +26,7 @@ public class AutorizacaoFilter implements Filter {
 
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse , FilterChain chain) throws IOException, ServletException {
 
-		System.out.println("->AutorizacaoFilter - mapping web.xml");
+		System.out.println("->AutorizacaoFilter");
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
