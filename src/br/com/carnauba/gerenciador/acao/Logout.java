@@ -12,7 +12,7 @@ public class Logout implements Acao {
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+		System.out.println("--> Sessao encerrada");
 		HttpSession sessao = request.getSession();
 		sessao.removeAttribute("usuarioLogado");
 		//sessao.invalidate();
